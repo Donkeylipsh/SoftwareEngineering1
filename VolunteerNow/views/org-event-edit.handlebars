@@ -1,0 +1,105 @@
+<head>
+    <!-- Bootstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="/css/organization.css">
+    <link rel="stylesheet" type="text/css" media="all" href="/css/main.css">
+</head>
+
+<div class="container-fluid background">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 white-bg">
+            <h1>Edit Event</h1>
+            <h2>{{event.organization_name}}</h2>
+            <form action="/event-update" method="post">
+                <div class="row">
+                    <div class="col-xs-7">
+                        <h3>Event Name: <input type="text" name="event_name" value="{{event.event_name}}" /></h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div><strong>Start Date</strong></div>
+                                <input type="date" name="date_start" value="{{event.date_start}}" />
+                            </div>
+                            <div class="col-xs-6">
+                                <div><strong>End Date</strong></div>
+                                <input type="date" name="date_end" value="{{event.date_end}}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p><strong>Description</strong></p>
+                <input type="text" name="event_description" value="{{event.event_description}}" />
+                <p>
+                    <strong>Minimum Age:</strong>
+                    <input type="text" name="min_age" value="{{event.min_age}}" />
+                </p>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p><strong>Address</strong></p>
+                        <p>
+                            Street Address: <input type="text" name="address" value="{{event.address_num}} {{event.address_street}}" />
+                            <br />
+                            State: <input type="text" name="address_state" value="{{event.address_state}}" />
+                            <br />
+                            Zip: <input type="text" name="address_zip" value="{{event.address_zip}}" />
+                        </p>
+                    </div>
+                    <div class="col-xs-6">
+                        <p><strong>Contact Information</strong></p>
+                        <p>
+                            Contact Name: <input type="text" name="contact_name" value="{{event.contact_name}}" />
+                            <br />
+                            Contact Phone: <input type="text" name="contact_phone" value="{{event.contact_phone}}" />
+                            <br />
+                            Contact Email: <input type="email" name="contact_email" value="{{event.contact_email}}" />
+                            <br />
+                            Contact URL: <input type="url" name="contact_url" value="{{event.contact_url}}" />
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <h3>Skills</h3>
+                    <table>
+                        {{#each allSkills}}
+                        <input type="checkbox" id="all_skills_{{skill_id}}" name="all_skills_{{skill_desc}}" value="{{skill_id}}" />{{skill_desc}}
+                        {{/each}}
+                    </table>
+                </div>
+                <div id="selected_skills">
+                    {{#each skill}}
+                    <input type="hidden" id="selected_skills_{{skill_id}}" name="selected_skills_{{skill_desc}}" value="all_skills_{{skill_id}}" />
+                    {{/each}}
+                </div>
+                <input type="hidden" name="event_id" value="{{event.event_id}}"
+                <div align="center">
+                    <button class="btn vol-login-btn" type="submit"><strong>Update Event</strong></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    console.log("In script");
+    $(function () {
+        console.log("Document Loaded");
+
+        $('#selected_skills').children().each(function () {
+            var selectedSkill = "#" + $(this).val();
+            console.log(selectedSkill);
+            $(selectedSkill).attr('checked', 'checked');
+        });
+    });
+    
+
+    
+</script>

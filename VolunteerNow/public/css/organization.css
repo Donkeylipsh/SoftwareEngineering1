@@ -1,0 +1,45 @@
+#organization-sign-in-container {
+    background-color: #CD90EA;
+}
+
+.org-sign-in-bg{
+    background-color:#EB1D58;
+}
+
+.org-sign-in-btn {
+    color: #97002B;
+    background-color: #f0f0f0;
+    border-color: #450364;
+    margin: 5px;
+    min-width: 175px;
+}
+
+.org-sign-in-btn:hover{
+    background-color: #EB1D58;
+    border-color: #97002B;
+}
+
+.org-sign-in-h2, .org-sign-in-form {
+    color: #450364;
+}
+
+#org-events-container {
+    background-color: #CD90EA;
+}
+
+.org-event-item {
+    margin-bottom:15px;
+    background-color: #f0f0f0;
+}
+
+.org-event-item:hover {
+    cursor:pointer;
+}
+
+#org-profile-container {
+    background-color: #CD90EA;
+}
+
+#org-profile-body {
+    background-color: #F0F0F0;
+}

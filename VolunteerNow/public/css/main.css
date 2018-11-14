@@ -1,0 +1,119 @@
+#header-body {
+    background-color: #6E1D94;
+    min-height: 90px;
+}
+
+#footer-body {
+    background-color: #6E1D94;
+    min-height: 45px;
+}
+
+.footer-h4{
+  margin:auto;
+  color:#f0f0f0;
+}
+
+.white-bg {
+    background-color: #f0f0f0;
+}
+
+/*#header-container, #main-container, #footer-container {
+  min-width: 320px;
+  max-width: 640px;
+  margin: auto;
+  padding: 10px;
+}
+
+#header-container, #footer-container {
+  text-align: center;
+}*/
+
+#footer-container{
+  padding-top: 15px;
+}
+
+#title-text{
+  color: #f0f0f0;
+  padding-top: 10px;
+}
+
+.form-fields-container {
+  padding: 10px 0;
+}
+
+#admin-approval-container, #admin-sign-in-container {
+    background-color: #CD90EA;
+}
+
+.pending-organization {
+    margin-top:10px;
+    margin-bottom:10px;
+  padding: 10px 0;
+  padding-left:10px;
+  padding-right:10px;
+  background-color: #f0f0f0;
+}
+
+.background {
+    background-color: #CD90EA;
+}
+
+.background-container {
+    background-color:#f0f0f0;
+}
+
+#index-container {
+    background-color: #CD90EA;
+    padding-bottom: 20px;
+}
+
+.index-h2 {
+    color: #450364;
+}
+
+.index-btn {
+    color: #450364;
+    background-color: #f0f0f0;
+    border-color: #450364;
+    margin: 5px;
+    width: 200px;
+}
+
+    .index-btn:hover, .index-btn:active, .index-btn:focus {
+        color: #CD90EA;
+        background-color: #8600C5;
+        border-color: #450364;
+    }
+
+#vol-sign-in-container {
+    background-color: #CD90EA;
+    color: #450364;
+}
+
+.vol-login-btn {
+    color: #450364;
+    background-color: #f0f0f0;
+    border-color: #450364;
+    margin: 5px;
+    width: 200px;
+}
+
+    .vol-login-btn:hover, .vol-login-btn:active, .vol-login-btn:focus {
+        color: #CD90EA;
+        background-color: #8600C5;
+        border-color: #450364;
+    }
+
+.admin-btn {
+    color: #f0f0f0;
+    background-color: #8600C5;
+    border-color: #450364;
+    margin: 5px;
+    width: 200px;
+}
+
+    .admin-btn:hover, .admin-btn:active, .admin-btn:focus {
+        color: #f0f0f0;
+        background-color: #450364;
+        border-color: #450364;
+    }
